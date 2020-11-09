@@ -8,7 +8,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 <br />
 <p align="center">
-	<img src="https://github.com/FernandoGaGu/beagle/blob/main/img/beagleLogo.png" alt="Logo">
+	<img src="https://github.com/FernandoGaGu/beagle/blob/main/img/beagleLogo.png" width="450" height="200" alt="Logo" >
 </p>
 
 > Python package with flexible implementations of genetic algorithms with support for different types of representations.
