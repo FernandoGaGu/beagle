@@ -184,11 +184,49 @@ class Population:
     """
     Class representing a population of individuals.
 
+    Available representations:
+
+    Parameters (representation = 'binary')
+    ----------
+    length: int
+        Number of bits.
+
+    For more info help(beagle.Binary)
+
+    Parameters (representation = 'integer')
+    ----------
+    value_coding: dict
+        Dictionary with the characteristic as a key and the coding value (integer) as a value.
+
+    replacement: bool
+        Value indicating if there can be repeated characteristics. By default False.
+
+    For more info help(beagle.Integer)
+
+
+    Parameters (representation = 'permutation')
+    ----------
+        events: list
+            List with the different events on which you want to find the optimal order.
+
+        restrictions: list
+            List of functions that must take a list of values and return True if the order falls within the range
+            of possibilities or False if there is some restriction for that combination.
+
+    For more info help(beagle.Permutation)
+
+    Parameters (representation = 'real')
+    ----------
+        bounds: list
+            List of tuples indicating the lower and upper limit for each possible value.
+
+    For more info help(beagle.RealValue)
+
     Methods
     -------
-    - increment_age()
-    - sort(indices)
-    - replace_older_individuals()
+    - increment_age(): Increment the age of the individuals in the population.
+    - sort(indices): Sort the individuals in the population based on a list of indices.
+    - replace_older_individuals(): Replace older individuals.
 
     Attributes
     ----------

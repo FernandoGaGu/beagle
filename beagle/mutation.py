@@ -564,27 +564,38 @@ def mutation(population: Population, schema: str = None, **kwargs):
     """
     Variation operator that subjects a population to mutation events. For more information on available operators use:
 
-        help(beagle.MUTATION_SCHEMAS['bit_flip]) for bit-flip operator (binary representation)
+        For bit-flip operator (binary representation):
+            help(beagle.MUTATION_SCHEMAS['bit_flip])
 
-        help(beagle.MUTATION_SCHEMAS['random_resetting]) for random resetting operator (integer representation)
+        For random resetting operator (integer representation)
+            help(beagle.MUTATION_SCHEMAS['random_resetting])
 
-        help(beagle.MUTATION_SCHEMAS['creep']) for creep mutation operator (integer representation)
+        For creep mutation operator (integer representation)
+            help(beagle.MUTATION_SCHEMAS['creep'])
 
-        help(beagle.MUTATION_SCHEMAS['uniform']) for uniform mutation operator (real-value representation)
+        For uniform mutation operator (real-value representation)
+            help(beagle.MUTATION_SCHEMAS['uniform'])
 
-        help(beagle.MUTATION_SCHEMAS['non_uniform']) for non-uniform mutation operator (real-value representation)
+        For non-uniform mutation operator (real-value representation)
+            help(beagle.MUTATION_SCHEMAS['non_uniform'])
 
-        help(beagle.MUTATION_SCHEMAS['uncorrelated_one_step']) for uncorrelated one step mutation operator (real-value representation)
+        For uncorrelated one step mutation operator (real-value representation)
+            help(beagle.MUTATION_SCHEMAS['uncorrelated_one_step'])
 
-        help(beagle.MUTATION_SCHEMAS['uncorrelated_n_step']) for uncorrelated N step mutation operator (real-value representation)
+        For uncorrelated N step mutation operator (real-value representation)
+            help(beagle.MUTATION_SCHEMAS['uncorrelated_n_step'])
 
-        help(beagle.MUTATION_SCHEMAS['inversion']) for inversion mutation operator (permutation representation)
+        For inversion mutation operator (permutation representation)
+            help(beagle.MUTATION_SCHEMAS['inversion'])
 
-        help(beagle.MUTATION_SCHEMAS['swap']) for swap mutation operator (permutation representation)
+        For swap mutation operator (permutation representation)
+            help(beagle.MUTATION_SCHEMAS['swap'])
 
-        help(beagle.MUTATION_SCHEMAS['insert']) for insert mutation operator (permutation representation)
+        For insert mutation operator (permutation representation)
+            help(beagle.MUTATION_SCHEMAS['insert'])
 
-        help(beagle.MUTATION_SCHEMAS['scramble']) for scramble mutation operator (permutation representation)
+        For scramble mutation operator (permutation representation)
+            help(beagle.MUTATION_SCHEMAS['scramble'])
 
     Parameters
     ---------

@@ -524,7 +524,6 @@ def _n_point_crossover_b(population: Population, n: int, **kwargs):
         individuals[idx] = child_2
         idx += 1
 
-
     return Population(size=n, representation='binary', individuals=individuals)
 
 
@@ -1149,35 +1148,50 @@ def recombination(population: Population, n: int, schema: str = None, **kwargs):
     A variation operator that generates a new population from another by means of recombination events. For more
     information on available operators use:
 
-        help(beagle.RECOMBINATION_SCHEMAS['one_point_b']) for one point crossover operator
+        For one point crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['one_point_b'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['n_point_b']) for N point crossover operator
+        For N point crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['n_point_b'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['uniform_b']) for uniform crossover operator
+        For uniform crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['uniform_b'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['one_point_i']) for one point crossover operator
+        For one point crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['one_point_i'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['n_point_i']) for N point crossover operator
+        For N point crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['n_point_i'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['uniform_i']) for uniform crossover operator
+        For uniform crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['uniform_i'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['arithmetic']) for arithmetic crossover operator
+        For arithmetic crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['arithmetic'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['one_point_r']) for one point crossover operator
+        For one point crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['one_point_r'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['n_point_r']) for N point crossover operator
+        For N point crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['n_point_r'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['uniform_r']) for uniform crossover operator
+        For uniform crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['uniform_r'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['blend']) for blend crossover operator
+        For blend crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['blend'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['pmx']) for pmx crossover operator
+        For pmx crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['pmx'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['edge-3']) for edge-3 crossover operator
+        For edge-3 crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['edge-3'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['order']) for order crossover operator
+        For order crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['order'])
 
-        help(beagle.RECOMBINATION_SCHEMAS['cycle']) for cycle crossover operator
+        For cycle crossover operator
+            help(beagle.RECOMBINATION_SCHEMAS['cycle'])
 
     Parameters
     ---------
