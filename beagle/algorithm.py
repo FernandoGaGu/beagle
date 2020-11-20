@@ -69,7 +69,7 @@ class Algorithm:
         self._kwargs = kwargs
         self._solutions = []
 
-    def run(self, generations: int, random_seed: int = None, evaluate_out_of_step: bool = True):
+    def run(self, generations: int, random_seed: int = None):
         """
         It executes the step function defined by the user and passed by argument during the number of generations
         indicated and optionally establishing a random seed in order to maintain the reproducibility of the algorithm.
@@ -82,9 +82,6 @@ class Algorithm:
 
         :param random_seed: (optional) int
             Random seed.
-
-        :param evaluate_out_of_step: bool (by default True)
-            Indicates whether to evaluate the population before step function.
         """
         if generations <= 0: raise TypeError('The number of generations must be an integer greater than 1.')
         if random_seed is not None: np.random.seed(random_seed)
@@ -94,6 +91,7 @@ class Algorithm:
 
         for n in tqdm(range(generations), desc='(%s) Generations ' % self._id):
             try:
+                self._kwargs['current_generation'] = n
                 next_gen_population, indicator = self._step(self._parents, self._fitness, **self._kwargs)
             except ValueError:
                 raise StepFunctionError(
