@@ -1,3 +1,7 @@
+import numpy as np
+from scipy.spatial import distance
+from collections import defaultdict
+from copy import deepcopy
 from ..population import Population, merge_populations
 from ..fitness import Fitness, evaluate, evaluate_parallel
 from ..base import Solution
@@ -7,11 +11,6 @@ from ..recombination import recombination
 from ..mutation import mutation
 from ..report import SaveBestSolution
 from ..utils.auxiliary_functions import static_vars
-# External dependencies
-import numpy as np
-from scipy.spatial import distance
-from collections import defaultdict
-from copy import deepcopy
 
 
 class SPEA2Solution(Solution):

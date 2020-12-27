@@ -1,12 +1,11 @@
-from .fitness import Fitness, evaluate
-from .population import Population
-from .exceptions import IncompleteArguments, StepFunctionError
-from .report import EarlyStopping, SolutionFound, SaveBestSolution, Report
-# External dependencies
 import numpy as np
 import time
 from tqdm import tqdm
 from copy import deepcopy
+from .fitness import Fitness, evaluate
+from .population import Population
+from .exceptions import IncompleteArguments, StepFunctionError
+from .report import EarlyStopping, SolutionFound, SaveBestSolution, Report
 
 
 class Algorithm:
@@ -125,11 +124,27 @@ class Algorithm:
             return False
 
         return True
-    
-    @property
-    def solutions(self, fitness_idx: int = 0) -> list:
+
+    def solutions(self, fitness_idx: int = 0, only_best: bool = False) -> list:
+        """
+        Method that returns all the solutions found (useful in combination with the SaveBestSolution indicator defined
+        in the step function) or if the only_best parameter is specified it will return the best solution.
+
+        Parameters
+        ----------
+        :param fitness_idx: int (default 0)
+            Fitness value on the basis of which to choose the best solution, useful for when more than one fitness
+            function has been applied.
+        :param only_best: bool (default False)
+            Returns only the best solution.
+
+        Returns
+        -------
+        :return list
+            Best solution(s).
+        """
         # If no solutions have been saved, a list with the best solution from the current population returns.
-        if self.solution_found:
+        if self.solution_found and only_best:
             return [get_best_solution(self, fitness_idx)]
 
         return self._solutions

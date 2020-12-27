@@ -1,8 +1,7 @@
-from ..population import Individual, Population
-from ..algorithm import Algorithm
-# External dependencies
 import os
 import pickle
+from ..population import Individual, Population
+from ..algorithm import Algorithm
 
 
 def save_population(file: str, beagle_obj: Algorithm or Population):

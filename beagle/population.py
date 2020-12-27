@@ -1,9 +1,8 @@
+import numpy as np
+from copy import deepcopy
 from .representation import Representation
 from .base import Representation as BaseRepresentation
 from .exceptions import InconsistentLengths
-# External dependencies
-import numpy as np
-from copy import deepcopy
 
 
 class Individual:

@@ -1,13 +1,12 @@
+import time
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
 from .exceptions import InsufficientReportGenerations
 from .report import Report, MOEAReport
 from .algorithm import Algorithm
 from .base import ReportBase
 from .wrapper import Wrapper
-# External dependencies
-import time
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.ticker import MaxNLocator
 
 
 def display(report: Algorithm or Report, **kwargs):

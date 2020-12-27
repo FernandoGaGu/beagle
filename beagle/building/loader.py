@@ -7,8 +7,8 @@ from .basic import basic_ga_1, basic_ga_2
 from .nsga2 import nsga2
 from .spea2 import spea2
 
-NSGA2_ID = 'experimental.NSGA2'
-SPEA2_ID = 'experimental.SPEA2'
+NSGA2_ID = 'NSGA2'
+SPEA2_ID = 'SPEA2'
 
 AVAILABLE_BUILDINGS = {
     'GA1': basic_ga_1,

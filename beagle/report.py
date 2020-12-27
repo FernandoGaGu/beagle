@@ -1,10 +1,9 @@
+import numpy as np
+from copy import deepcopy
 from collections import defaultdict
 from .population import Population
 from .base import Indicator, ReportBase
 from .utils.moea import hypervolume
-# External dependencies
-import numpy as np
-from copy import deepcopy
 
 
 class Report(ReportBase):

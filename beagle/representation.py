@@ -1,8 +1,8 @@
-from .base import Representation as base_Representation
-from .exceptions import IncompleteArguments
-# External dependencies
 import numpy as np
 from copy import deepcopy
+from .base import Representation as base_Representation
+from .exceptions import IncompleteArguments
+
 
 AVAILABLE_REPR = ['Binary', 'Integer', 'Permutation', 'Real']
 

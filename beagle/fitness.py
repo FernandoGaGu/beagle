@@ -1,7 +1,7 @@
+import multiprocessing as mp
 from .population import Population, Individual
 from .exceptions import FitnessFunctionError
-# External dependencies
-import multiprocessing as mp
+
 
 CPUS = mp.cpu_count()
 

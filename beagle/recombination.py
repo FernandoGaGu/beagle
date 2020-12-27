@@ -1,10 +1,10 @@
+import numpy as np
+from copy import deepcopy
 from .exceptions import UnrecognisedParameter
 from .population import Population, Individual
 from .representation import Integer, Binary, Permutation, RealValue
 from .utils.auxiliary_functions import adjust_limits
-# External dependencies
-import numpy as np
-from copy import deepcopy
+
 
 # --- DEFAULT ARGUMENTS --- #
 _cut_points = 1  # _n_point_crossover_b, _n_point_crossover_i, _n_point_crossover_r

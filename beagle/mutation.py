@@ -1,9 +1,9 @@
+import numpy as np
+from copy import deepcopy
 from .exceptions import UnrecognisedParameter
 from .utils.auxiliary_functions import adjust_limits
 from .population import Population
-# External dependencies
-import numpy as np
-from copy import deepcopy
+
 
 # --- DEFAULT ARGUMENTS --- #
 _probability = 0.1                # _bit_flip, _random_resetting, _creep_mutation, _uniform_mutation,

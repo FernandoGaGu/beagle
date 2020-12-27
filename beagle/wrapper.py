@@ -1,5 +1,5 @@
-from .algorithm import Algorithm
 import multiprocessing as mp
+from .algorithm import Algorithm
 
 
 class Wrapper:

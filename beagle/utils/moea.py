@@ -1,9 +1,8 @@
-from ..base import Solution
-from ..population import Population
-# External dependencies
 import numpy as np
 from collections import defaultdict
 from functools import reduce
+from ..base import Solution
+from ..population import Population
 
 
 # Fast Non Dominated Sort for MOEAs
@@ -145,17 +144,30 @@ def hypervolume(pareto_front: np.ndarray):
         return reduce(lambda coor1, coor2: coor1 * coor2, np.min(solutions, axis=0))
 
     # Sort solution based on one target function
-    pareto_front = np.sort(pareto_front, axis=0)
+    front = np.sort(pareto_front, axis=0)
 
     # Calculate intersections between each pair of adjacent solutions
-    intersec = [vol_intersec(pareto_front[n], pareto_front[n + 1]) for n in range(len(pareto_front) - 1)]
+    intersec = [vol_intersec(front[n], front[n + 1]) for n in range(len(front) - 1)]
 
     # Calculate the volume of each solution and subtract the volumes of the intersections
-    return sum(list(map(vol, pareto_front))) - sum(intersec)
+    return sum(list(map(vol, front))) - sum(intersec)
 
 
 def pareto_front(moea):
-    """DESCRIPTION"""
+    """
+    Method that allows to extract the values of the individuals from a multi-objective genetic algorithm
+    of the last generation.
+
+    Parameters
+    ----------
+    :param moea: beagle.Algorithm
+        Multi-objective genetic algorithm.
+
+    Returns
+    -------
+    :return tuple
+        (Indices of individuals in the population, Values of individuals on the non-dominated front)
+    """
 
     last_generation = max(list(moea.report._report.keys()))
     populations = list(moea.report._report[last_generation].keys())
@@ -170,6 +182,3 @@ def pareto_front(moea):
                 indices[population].append(i)
 
     return indices, front
-
-
-

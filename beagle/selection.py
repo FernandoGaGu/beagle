@@ -1,11 +1,10 @@
+import numpy as np
+from functools import reduce
+from copy import deepcopy
 from .utils.auxiliary_functions import static_vars
 from .exceptions import UnrecognisedParameter
 from .population import Population, Individual
 from .fitness import Fitness
-# External dependencies
-import numpy as np
-from functools import reduce
-from copy import deepcopy
 
 
 # -- SELECTION OPERATORS -- #

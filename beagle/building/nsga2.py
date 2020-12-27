@@ -1,3 +1,4 @@
+import numpy as np
 from ..population import Population, merge_populations
 from ..fitness import Fitness, evaluate, evaluate_parallel
 from ..base import Solution
@@ -6,8 +7,6 @@ from ..selection import uniform_selection, ranking_selection, fitness_proportion
 from ..recombination import recombination
 from ..mutation import mutation
 from ..report import SaveBestSolution
-# External dependencies
-import numpy as np
 
 
 class NSGA2Solution(Solution):
