@@ -25,8 +25,8 @@ _sigma_idx = None                 # _uncorrelated_mutation_one_step (IMP, REAL V
 # Binary representation
 def _bit_flip(population: Population, **kwargs):
     """
-    Bit-flip mutation operator for binary representations. This gene considers each gene independently by allowing each
-    bit to flip (e.g. from 0 to 1 or from 1 to 0) based on a user-specified probability (default 0.1) from a random
+    Bit-flip mutation operator for binary representations. This operator considers each gene independently by allowing
+    each bit to flip (e.g. from 0 to 1 or from 1 to 0) based on a user-specified probability (default 0.1) from a random
     normal distribution.
 
     Parameters
@@ -183,7 +183,7 @@ def _non_uniform_mutation(population: Population, **kwargs):
     for integer representations.
     Usually, the objective of this operator is to introduce a small change in each value when it is selected to
     be mutated. To achieve this, the operator adds to the selected value a randomly sampled amount of change from
-    an normal distribution with zero mean and a given standard deviation and adjusts the value to the allowed
+    a normal distribution with zero mean and a given standard deviation and adjusts the value to the allowed
     range of values.
 
     Parameters
@@ -318,7 +318,7 @@ def _uncorrelated_mutation_n_step(population: Population, **kwargs):
 
     The aim of this operator is to use different step sizes for each of the individual positions. Therefore each value
     in the genotype has an associated standard deviation. In this case the last half of the individual's genotype must
-    include  the sigma values. Caution should be taken when evaluating the fitness of individuals.
+    include the sigma values. Caution should be taken when evaluating the fitness of individuals.
 
     Parameters
     ----------
@@ -565,10 +565,10 @@ def mutation(population: Population, schema: str = None, **kwargs):
     Variation operator that subjects a population to mutation events. For more information on available operators use:
 
         For bit-flip operator (binary representation):
-            help(beagle.MUTATION_SCHEMAS['bit_flip])
+            help(beagle.MUTATION_SCHEMAS['bit_flip'])
 
         For random resetting operator (integer representation)
-            help(beagle.MUTATION_SCHEMAS['random_resetting])
+            help(beagle.MUTATION_SCHEMAS['random_resetting'])
 
         For creep mutation operator (integer representation)
             help(beagle.MUTATION_SCHEMAS['creep'])

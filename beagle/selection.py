@@ -62,10 +62,10 @@ def ranking_selection(population: Population, n: int, schema: str = None, **kwar
 
     This probability is used when using selection operators:
 
-        Stochastic Universal Sampling       help(beagle.SELECTION_SCHEMAS['stochastic_universal_sampling])
-        Roulette wheel                      help(beagle.SELECTION_SCHEMAS['roulette_wheel])
+        Stochastic Universal Sampling       help(beagle.SELECTION_SCHEMAS['stochastic_universal_sampling'])
+        Roulette wheel                      help(beagle.SELECTION_SCHEMAS['roulette_wheel'])
 
-    If tournament selection is used [help(beagle.SELECTION_SCHEMAS['tournament_selection])] these probabilities
+    If tournament selection is used [help(beagle.SELECTION_SCHEMAS['tournament_selection'])] these probabilities
     are not used.
 
     Parameters
@@ -173,9 +173,8 @@ def fitness_proportional_selection(population: Population, n: int, schema: str =
 def survivor_selection(population: Population, schema: str = None, **kwargs) -> Population:
     """
     Survivor selection operator. These operators include strategies of selection and annihilation of the population
-    based on their fitness values. Unlike the other operators, they receive two populations, the parents and the
-    offspring, and apply the selection considering the two populations together, or optionally using only one of
-    the two populations (specified by apply_to param).
+    based on their fitness values. This operator receives a population and returns a new population based on the
+    selected operator.
 
     Available schemes:
 
@@ -187,7 +186,7 @@ def survivor_selection(population: Population, schema: str = None, **kwargs) -> 
 
                 help(beagle.SELECTION_SCHEMES['elitism')
 
-        Round Robin Tournament: Select he best individuals in population based on a schema analogous to tournament
+        Round Robin Tournament: Select the best individuals in population based on a schema analogous to tournament
         selection.
 
                 help(beagle.SELECTION_SCHEMES['round_robin_tournament'])

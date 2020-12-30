@@ -817,7 +817,7 @@ def _n_point_crossover_r(population: Population, n: int, **kwargs):
 # Real-value representation
 def _uniform_crossover_r(population: Population, n: int, **kwargs):
     """
-    Random uniform point cross-over operator adapted for integer representations. This operator worked by dividing the
+    Random uniform point cross-over operator adapted for real-value representations. This operator worked by dividing the
     parents into a number of sections of contiguous genes and reassembling them to produce the offspring. This
     operator isn't able to create new genetic material.
 
